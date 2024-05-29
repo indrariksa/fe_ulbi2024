@@ -1,11 +1,18 @@
 import { addInner } from "https://bukulapak.github.io/element/process.js";
 import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
 import { isiTabel } from "../temp/table.js";
+
+var MyVar = {};
+
 export function isiTablePresensi(results) {
+    MyVar.length = results.length;
     results.sort((a, b) => new Date(b.datetime) - new Date(a.datetime));
     results.forEach(isiRow);
 }
+
 function isiRow(value) {
+    document.getElementById("jml").textContent = MyVar.length + " Data";
+    
     let content =
         isiTabel.replace("#NAMA#", value.biodata.nama)
             .replace("#NOHP#", value.biodata.phone_number)
