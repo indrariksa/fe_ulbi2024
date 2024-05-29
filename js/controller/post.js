@@ -10,10 +10,11 @@ function pushData(){
         longitude : parseFloat(getValue("longitude")),
         latitude : parseFloat(getValue("latitude")),
         location : getValue("location"),
-        phone_number : getValue("phone_number"),
         checkin : getValue("checkin"),
+        phone_number : getValue("phone_number"),
         biodata : {
             nama : getValue("nama"),
+            phone_number : getValue("phone_number"),
             jabatan : getValue("jabatan"),
             jam_kerja : [{
                 durasi : parseInt(getValue("durasi")),
